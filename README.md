@@ -15,3 +15,7 @@ To retrieve these files and work with them:
 ## When Complete
 
 Zip your folder up and submit it to the dropbox on [D2L](https://d2l.lambtoncollege.ca)
+
+## Hint for Exercise #5
+
+The "questionsMissed()" method of Exercise #5 is deceptively complex. The expected result is an array of all incorrect question numbers, and only the incorrect ones. It's possible to solve this problem using ArrayLists and converting back to an Integer array, but the easiest solution is to build an array that is the size of totalIncorrect(). eg- `new int[totalIncorrect()]`
