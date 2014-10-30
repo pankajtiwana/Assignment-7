@@ -99,8 +99,8 @@ public class RainFallTest {
         for (int i = 0; i < dummy.length; i++) {
             instance.setRainfall(i, dummy[i]);
         }
-        double expResult = 12.0;
-        double result = instance.getMax();
+        int expResult = 12;
+        int result = instance.getMax();
         assertEquals("getMax() does not return expected value", expResult,
                 result, 0.0001);
     }
@@ -115,10 +115,10 @@ public class RainFallTest {
         for (int i = 0; i < dummy.length; i++) {
             instance.setRainfall(i, dummy[i]);
         }
-        double expResult = 1.0;
-        double result = instance.getMin();
+        int expResult = 1;
+        int result = instance.getMin();
         assertEquals("getMin() does not return expected value", expResult,
-                result, 0.0001);
+                result);
     }
 
 }
