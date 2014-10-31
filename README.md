@@ -1,6 +1,6 @@
 # CPD-3314 Assignment #7
 
-This repo contains starting files and automated unit tests for a selection of exercises based on Chapter 7 of the [textbook for this course](http://www.pearsonhighered.com/educator/product/Starting-Out-with-Java-Early-Objects/0132855836.page#resources).
+This repo contains starting files and automated unit tests for a selection of exercises based on Chapter 7 of the [textbook for this course](http://www.pearsonhighered.com/educator/product/Starting-Out-with-Java-From-Control-Structures-through-Objects-5E/9780132855839.page).
 
 ## Arrays and the ArrayList Class
 
