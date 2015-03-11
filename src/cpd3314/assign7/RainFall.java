@@ -45,5 +45,68 @@ package cpd3314.assign7;
  * @author <ENTER YOUR NAME HERE>
  */
 public class RainFall {
+    double arrayrain[]=new double[12];
+    
+    public void setRainfall(int month, double fall)
+    {
+        arrayrain[month]=fall;
+    }
+    
+    public double getRainfall(int month){
+        
+        double fall=arrayrain[month];
+        return fall;
+    }
+    
+    public double getTotal()
+    {
+        double count=0;
+        for(int i=0; i<12; i++)
+        {
+            count=count+arrayrain[i];
+        }
+        return count;
+    }
+    
+    public double getAverage()
+    {
+         double count=0;
+        for(int i=0; i<12; i++)
+        {
+            count=count+arrayrain[i];
+        }
+        return count/12;
+    }
+    
+    public int getMax()
+    {
+        double max=arrayrain[0];
+        int val=0;
+        for(int i=0; i<12; i++)
+        {
+            if(arrayrain[i]> max)
+            {
+                max=arrayrain[i];
+                val=i;
+            }
+        }
+        return val;
+    }
+    
+    
+     public int getMin()
+    {
+        double min=arrayrain[0];
+        int val=0;
+        for(int i=0; i<12; i++)
+        {
+            if(arrayrain[i]< min)
+            {
+                min=arrayrain[i];
+                val=i;
+            }
+        }
+        return val;
+    }
 
 }
