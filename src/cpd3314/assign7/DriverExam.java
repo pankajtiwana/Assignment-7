@@ -23,6 +23,8 @@
 
 package cpd3314.assign7;
 
+import java.util.ArrayList;
+
 /* Exercise #5 - Driver's License Exam
  *
  * The local Driver's License Office has asked you to write a program that
@@ -51,8 +53,71 @@ package cpd3314.assign7;
  * - Gaddis pg. 491
  */
 /**
- * @author <ENTER YOUR NAME HERE>
+ * @author Pankaj
  */
 public class DriverExam {
+    int countcorrect=0;
+    int countincorrect=0;
+    ArrayList missed=new ArrayList();
+    //int missed[]=new int[20];
+    char correctanswers[]={'B', 'D', 'A', 'A', 'C', 'A', 'B', 'A', 'C', 'D',
+        'B', 'C', 'D', 'A', 'D', 'C', 'C', 'B', 'D', 'A'};
+    char useranswers[]=new char[20];
+    public void setAnswer(int ansnum, char ans)
+    {
+     this.useranswers[ansnum-1]=ans;   
+    }
+    public boolean passed()
+    {
+        for(int i=0; i<correctanswers.length;i++)
+        {
+            if(correctanswers[i]==useranswers[i])
+            {
+                countcorrect+=1;
+            }
+        }
+        return countcorrect>=15;
+    }
+    public int totalCorrect()
+    {
+         for(int i=0; i<correctanswers.length;i++)
+        {
+            if(correctanswers[i]==useranswers[i])
+            {
+                countcorrect+=1;
+            }
+        }
+         return countcorrect;
+    }
+    
+    public int totalIncorrect()
+    {
+         for(int i=0; i<correctanswers.length;i++)
+        {
+            if(correctanswers[i]!=useranswers[i])
+            {
+                countincorrect+=1;
+            }
+        }
+         return countincorrect;
+    }
+    public int[] questionsMissed()
+    {
+        
+        for(int i=0; i<correctanswers.length;i++)
+        {
+            if(correctanswers[i]!=useranswers[i])
+            {
+                 missed.add(i+1);
+                
+            }
+        } 
+         int miss[]= new int[missed.size()];
+                 for(int j=0;  j<miss.length; j++)
+                 {
+                    miss[j]=(int) missed.get(j);
+                 }
+        return miss;
+    }
 
 }
