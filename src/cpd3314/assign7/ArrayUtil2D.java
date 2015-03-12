@@ -55,5 +55,105 @@ package cpd3314.assign7;
  * @author <ENTER YOUR NAME HERE>
  */
 public class ArrayUtil2D {
+    double arr[][]=new double[100][100];
+    double total=0;
+    int count=0;
+    //int row=0;
+    //int col=0;
+    public double getTotal(double arr[][])
+    {
+       //this.arr=arr;
+       for(int i=0; i<arr.length; i++)
+       {
+           
+           for(int j=0; j<arr[i].length; j++)
+           {
+           total=total+arr[i][j];
+                   }
+       }
+       return total;
+    }
+    
+    public double getAverage(double arr[][])
+    {
+       // this.arr=arr;
+        for(int i=0; i<arr.length; i++)
+
+        {
+         for (int j=0; j<arr[i].length; j++)  
+         {
+             count=count+1;
+             total=total+arr[i][j];
+         }
+             
+         }
+        return total/count;
+        }
+    public double getRowTotal(double arr[][], int row)
+    {
+        //System.out.println(arr[row-1].length);
+       // this.arr=arr;
+       // this.row=row;
+        
+        for(int i=0; i<arr[row].length; i++)
+        {
+            //System.out.println(arr[row].length);
+            total=total+arr[row][i];
+        }
+        return total;
+        
+    }
+    
+    public double getColumnTotal(double arr[][], int col)
+    {
+        //System.out.println(arr[row-1].length);
+       // this.arr=arr;
+        //this.col=col;
+        for(int i=0; i<arr[col].length; i++)
+        {
+            //System.out.println(arr[row].length);
+            total=total+arr[i][col];
+        }
+        return total;
+        
+    }
+    
+     public double getHighestInRow(double arr[][], int row)
+    {
+        //System.out.println(arr[row-1].length);
+       // this.arr=arr;
+       // this.row=row;
+        double high=arr[row][0];
+        for(int i=0; i<arr[row].length; i++)
+        {
+            //System.out.println(arr[row].length);
+            if(arr[row][i]> high)
+            {
+                high=arr[row][i];
+            }
+           
+        }
+        return high;
+        
+    }
+     public double getLowestInRow(double arr[][], int row)
+    {
+        //System.out.println(arr[row-1].length);
+       // this.arr=arr;
+       // this.row=row;
+        double low=arr[row][0];
+        for(int i=0; i<arr[row].length; i++)
+        {
+            //System.out.println(arr[row].length);
+            if(arr[row][i]< low)
+            {
+                low=arr[row][i];
+            }
+           
+        }
+        return low;
+        
+    }
+    
     
 }
